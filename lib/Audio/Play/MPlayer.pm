@@ -6,7 +6,7 @@ use base qw(Class::Accessor::Fast);
 
 =head1 NAME
 
-Audio::Play::Mplayer - a frontend to play audio files using MPlayer
+Audio::Play::MPlayer - a frontend to play audio files using MPlayer
 
 =head1 SYNOPSIS
 
@@ -165,6 +165,7 @@ sub parse {
             }
         } elsif( $line =~ /^Playing\s/ ) {
             $self->{$_->[1]} = undef foreach values %info;
+            $self->command( $_->[0] ) foreach values %info;
         } elsif( $line =~ /^\s+(title|artist|album|year|comment|genre):\s(.*?)\s*$/i ) {
             # FIXME heuristic
             $self->{lc($1)} = $2;
@@ -221,6 +222,8 @@ sub pause {
     $self->command( "pause" );
     if( $self->{state} == 2 ) {
         $self->parse( qr/=====\s+PAUSE\s+=====/, 1 );
+        # try to parse metatdata command answers
+        $self->poll;
     } elsif( $self->{state} == 1 ) {
         $self->{state} = 2;
     }
