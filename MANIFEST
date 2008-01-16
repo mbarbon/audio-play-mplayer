@@ -3,6 +3,7 @@ Changes
 MANIFEST
 MANIFEST.SKIP
 META.yml
+Makefile.PL
 lib/Audio/Play/MPlayer.pm
 t/001_load.t
 t/002_run_mplayer.t
