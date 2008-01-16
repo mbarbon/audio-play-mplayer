@@ -7,7 +7,6 @@ use Module::Build;
 my $build = Module::Build->new
   ( module_name        => 'Audio::Play::MPlayer',
     license            => 'perl',
-    author             => 'Mattia Barbon <mbarbon@cpan.org>',
     requires           =>
         { 'Class::Accessor' => '0.27',
           },

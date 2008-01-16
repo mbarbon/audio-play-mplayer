@@ -1,6 +1,6 @@
 Revision history for Perl extension Audio::Play::Mplayer.
 
-0.02
+0.02  Wed Jan 16 23:35:56 CET 2008
 	- Use MPlayer metadata commands instead of heuristics
 	  to parse track metadata.
 	- Add passthrough Makefile.PL.
