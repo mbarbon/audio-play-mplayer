@@ -55,7 +55,7 @@ returns C<1>, to be able to write:
 use IPC::Open3 qw(open3);
 use IO::Handle;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 # FIXME, missing
 # url type layer mode mode_extension copyrighted error_protected
