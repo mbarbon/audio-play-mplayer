@@ -181,7 +181,8 @@ sub parse {
 sub poll {
     my( $self, $wait ) = @_;
 
-    $self->parse( qr/^\0/, $wait );
+    $self->parse( qr/./, $wait ); # wait for anything
+    $self->parse( qr/^\0/, 0 ); # consume pending output
 }
 
 sub command {
