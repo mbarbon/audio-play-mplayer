@@ -45,8 +45,8 @@ have not been implemented, and that:
     jump
     tpf
 
-work differently: C<jump> take offsets in seconds, and C<tpf> always
-returns C<1>, to be able to write:
+work differently: C<jump> takes offsets in seconds, and C<tpf> always
+returns C<1> to make it possible to write:
 
     $player->jump( 60 / $player->tpf );
 
