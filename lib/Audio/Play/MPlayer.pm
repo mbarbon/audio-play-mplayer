@@ -256,6 +256,11 @@ L<Audio::Play::MPG123> by Marc Lehmann <schmorp@schmorp.de>.
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
+=head1 SOURCES
+
+The latest sources can be found on GitHub at
+L<http://github.com/mbarbon/audio-play-mplayer/tree>
+
 =head1 THANKS
 
 Marc Lehmann <schmorp@schmorp.de> for L<Audio::Play::MPG123>.
