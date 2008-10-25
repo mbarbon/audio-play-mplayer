@@ -10,7 +10,7 @@ my $player = get_player;
 
 $player->load( 't/data/ex-mp30.mp3' );
 $player->pause;
-sleep 0.3;
+sleep 0.8;
 $player->poll;
 
 is( $player->title, 'Example file', 'title is correct' );
