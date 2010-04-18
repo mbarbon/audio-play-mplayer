@@ -16,6 +16,7 @@
 \bBuild$
 \bBuild.bat$
 \b_build
+^MYMETA.yml$
 
 # Avoid Devel::Cover generated files
 \bcover_db
