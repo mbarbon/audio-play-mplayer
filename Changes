@@ -1,6 +1,6 @@
 Revision history for Perl extension Audio::Play::Mplayer.
 
-0.03
+0.03  Sun Apr 18 17:35:18 CEST 2010
 	- Stop poll() with 'wait' flag from hanging.
 
 0.02  Wed Jan 16 23:35:56 CET 2008
