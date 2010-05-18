@@ -14,6 +14,10 @@ Audio::Play::MPlayer - a frontend to play audio files using MPlayer
 
     # same as Audio::Play::MPG123
     $player = Audio::Play::MPlayer->new;
+
+    # Set speed to _2.5x_
+    $player->speed(+1.5);
+
     $player->load( "ex-mp30.mp3" );
     print $player->title, "\n";
     $player->poll( 1 ) until $player->state == 0;
@@ -241,6 +245,17 @@ sub jump {
     } else {
         $self->command( "seek $seconds 2" );
     }
+}
+
+# Sets the player speed to current speed + delta
+sub speed {
+    my( $self, $delta ) = @_;
+
+    return if $self->{state} == 0;
+    return if not defined $delta or $delta == 0;
+
+    $self->command( sprintf( "speed %.2f", $delta ) );
+    return;
 }
 
 # mock Audio::Play::MPG123
